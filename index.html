@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<!--
+	Story by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Mr Dippy & Ms Chippy's Home</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="divided">
+
+				<!-- One -->
+					<section class="banner style1 orient-left content-align-left image-position-center fullscreen onload-image-fade-in onload-content-fade-right">
+						<div class="content">
+							<h1>狸狸和水桶君的秘密花园</h1>
+							<h2 id="timer"></h1>
+							<p class="major">月が綺麗ですね。</p>
+							<ul class="actions stacked">
+								<li><a href="#timeline" class="button big wide smooth-scroll-middle">Our Journey</a></li>
+							</ul>
+						</div>
+						<div class="image">
+							<img src="images/homepage-lassen.jpeg" alt="" />
+						</div>
+					</section>
+
+				<!-- Five -->
+					<section class="wrapper style1 align-center" id="timeline">
+						<div class="inner">
+							<h2>我们的故事</h2>
+						</div>
+						<iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=183I2jXNOLvEV2RC44aGX9E0BMknf8SVB7DlLxnTm0M4&font=Default&lang=en&initial_zoom=1&height=625' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
+					</section>
+					
+
+
+				<!-- Footer -->
+					<footer class="wrapper style1 align-center">
+						<div class="inner">
+							<p>Implemented with ♥ by Wenhao Su & Zhiqian Zhou</p>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+			<script>
+				var eventDate  = new Date("June 26, 2021 11:00 PM PST");
+			
+			
+				var x = setInterval(function(){
+			
+					var currentDate = new Date();
+			
+					// Calculate the difference in seconds between the future and current date
+					var distance = currentDate.getTime() - eventDate.getTime();
+			
+					// Calculate day difference and apply class to .clock for extra digit styling.
+					function dayDiff(first, second) {
+						return (second - first) / (1000 * 60 * 60 * 24);
+					}
+					var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+					var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+					var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+					var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+			
+					document.getElementById("timer").innerHTML = days + "d  " + hours + "h  "
+						+ minutes + "m  " + seconds + "s  ";
+					});
+			</script>
+	</body>
+</html>
